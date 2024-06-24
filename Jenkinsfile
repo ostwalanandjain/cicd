@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+parameters {
+  booleanParam defaultValue: true, description: 'false', name: 'Deploy_to_Prod'
+}
+
     stages {
         stage('Checkout GitHub repo') {
             steps {
